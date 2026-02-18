@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Premium Website Layout with Logo</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 100px 60px auto;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        }
+
+        /* Row 1: Header */
+        .header-row {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            color: white;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-left: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            display: block;
+            max-height: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #00f5d4;
+        }
+
+        .logo span {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            user-select: none;
+        }
+
+        /* Row 2: Navigation */
+        .nav-row {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            background: rgba(0,0,0,0.4);
+        }
+
+        .nav-row a {
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            transition: 0.3s;
+            user-select: none;
+        }
+
+        .nav-row a:hover {
+            background: #00c6ff;
+            color: black;
+        }
+
+        /* Row 3: Content */
+        .content-row {
+            display: grid;
+            grid-template-columns: 250px auto;
+            background: rgba(0,0,0,0.15);
+        }
+
+        .services {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            color: white;
+            border-right: 1px solid rgba(255,255,255,0.2);
+            user-select: none;
+        }
+
+        .services h3 {
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .services a {
+            display: block;
+            margin: 15px 0;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .services a:hover {
+            color: #00f5d4;
+        }
+
+        .display-area {
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Row 1: Header -->
+    <div class="header-row">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" />
+            <span>My Website</span>
+        </div>
+        <div class="website-title">
+            <!-- Optional slogan or empty -->
+        </div>
+    </div>
+
+    <!-- Row 2: Navigation -->
+    <div class="nav-row">
+        <a href="home.html" target="contentFrame">Home</a>
+        <a href="login.html" target="contentFrame">Login</a>
+        <a href="registration.html" target="contentFrame">Registration</a>
+        <a href="catalogue.html" target="contentFrame">Catalogue</a>
+        <a href="cart.html" target="contentFrame">Cart</a>
+        <a href="contact.html" target="contentFrame">Contact Us</a>
+    </div>
+
+    <!-- Row 3: Content -->
+    <div class="content-row">
+        <div class="services">
+            <h3>Services</h3>
+            <a href="service1.html" target="contentFrame">Web Design</a>
+            <a href="service2.html" target="contentFrame">App Development</a>
+            <a href="service3.html" target="contentFrame">SEO</a>
+            <a href="service4.html" target="contentFrame">Marketing</a>
+        </div>
+
+        <div class="display-area">
+            <iframe name="contentFrame" src="home.html"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
